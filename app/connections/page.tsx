@@ -69,8 +69,18 @@ export default function ConnectionsPage() {
         </div>
       )}
 
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/80 pb-6">
+      {/* Header with Campus Scene */}
+      <div className="relative rounded-3xl overflow-hidden glass-panel border border-border/80 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-md">
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1800"
+            alt="Students on Campus"
+            className="w-full h-full object-cover object-center opacity-20 dark:opacity-10 scale-105 filter blur-[1px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-card/95 via-card/90 to-card/95" />
+        </div>
+
         <div className="space-y-1">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary">
             <Users className="w-4 h-4" />

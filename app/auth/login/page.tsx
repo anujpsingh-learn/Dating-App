@@ -56,8 +56,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-md p-8 rounded-3xl border border-primary/20 bg-card shadow-xl space-y-6">
+    <div className="relative min-h-[88vh] flex items-center justify-center px-4 py-12 overflow-hidden">
+      {/* Background Campus Scene */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1920"
+          alt="University campus background"
+          className="w-full h-full object-cover object-center opacity-30 dark:opacity-20 scale-105 filter blur-[2px]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+      </div>
+
+      <Card className="w-full max-w-md p-8 rounded-3xl border border-primary/30 glass-panel shadow-2xl space-y-6 relative">
         <div className="text-center space-y-2">
           <div className="w-12 h-12 rounded-2xl vibe-gradient flex items-center justify-center text-white mx-auto shadow-md shadow-primary/25">
             <Sparkles className="w-6 h-6" />

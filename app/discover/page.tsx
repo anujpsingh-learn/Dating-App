@@ -69,8 +69,19 @@ export default function DiscoverPage() {
         </div>
       )}
 
-      {/* Header Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border/80 pb-6">
+      {/* Header Banner with Scenic Campus Backdrop */}
+      <div className="relative rounded-3xl overflow-hidden glass-panel border border-border/80 p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-md">
+        {/* Background photo */}
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=1920"
+            alt="Campus Life"
+            className="w-full h-full object-cover object-center opacity-20 dark:opacity-10 scale-105 filter blur-[1px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-card/95 via-card/90 to-card/95" />
+        </div>
+
         <div className="space-y-1.5">
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
             <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />

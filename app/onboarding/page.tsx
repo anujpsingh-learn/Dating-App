@@ -267,7 +267,19 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10 sm:py-16 space-y-8">
+    <div className="relative min-h-screen py-10 sm:py-16 overflow-hidden">
+      {/* Background Campus Scene */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=2000"
+          alt="University Campus Background"
+          className="w-full h-full object-cover object-center opacity-20 dark:opacity-10 filter blur-[2px] scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background" />
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 space-y-8">
       {/* Step Progress Header */}
       <div className="space-y-3 text-center sm:text-left">
         <div className="flex items-center justify-between">
@@ -712,6 +724,7 @@ export default function OnboardingPage() {
           </div>
         </Card>
       )}
+      </div>
     </div>
   );
 }

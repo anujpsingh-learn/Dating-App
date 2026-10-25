@@ -58,8 +58,19 @@ export default function VerifyOtpPage() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-md p-8 rounded-3xl border border-primary/20 bg-card shadow-xl space-y-6">
+    <div className="relative min-h-[88vh] flex items-center justify-center px-4 py-12 overflow-hidden">
+      {/* Background Campus Scene */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1920"
+          alt="University campus background"
+          className="w-full h-full object-cover object-center opacity-30 dark:opacity-20 scale-105 filter blur-[2px]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+      </div>
+
+      <Card className="w-full max-w-md p-8 rounded-3xl border border-primary/30 glass-panel shadow-2xl space-y-6 relative">
         <Link
           href="/auth/login"
           className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"

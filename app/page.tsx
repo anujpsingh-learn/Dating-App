@@ -203,9 +203,22 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 2. HIGH-ENERGY HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 md:pt-16 md:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* 2. HIGH-ENERGY HERO SECTION WITH CAMPUS PANORAMA BACKGROUND */}
+      <section className="relative w-full overflow-hidden border-b border-border/80">
+        {/* Real Campus Panorama Photo Background */}
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=2000"
+            alt="University Campus Scene"
+            className="w-full h-full object-cover object-center opacity-30 dark:opacity-20 scale-105 filter blur-[1.5px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/90 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-transparent" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 md:pt-16 md:pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Bold Copy & Real Student Proof */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Campus Tag Pill */}
@@ -405,6 +418,7 @@ export default function LandingPage() {
             </Card>
           </div>
         </div>
+        </div>
       </section>
 
       {/* 3. CAMPUS TRIBES - PHOTO LIFESTYLE CARDS */}
@@ -490,6 +504,16 @@ export default function LandingPage() {
       {/* 4. INTERACTIVE "QUICK VIBE FINDER" TOOL */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="rounded-3xl glass-panel border border-primary/30 p-8 sm:p-12 space-y-8 shadow-xl relative overflow-hidden">
+          {/* Subtle real campus innovation lab backdrop */}
+          <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1800"
+              alt="Campus Collaboration"
+              className="w-full h-full object-cover object-center opacity-15 dark:opacity-10 scale-105 filter blur-[1px]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-card/95 via-card/90 to-card/95" />
+          </div>
           <div className="max-w-2xl space-y-2">
             <Badge variant="teal" className="text-xs font-bold uppercase tracking-widest">
               Instant Preview
@@ -768,9 +792,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 8. HIGH-CONVERTING BOTTOM CTA */}
+      {/* 8. HIGH-CONVERTING BOTTOM CTA WITH SUNSET CAMPUS BACKDROP */}
       <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="rounded-3xl vibe-gradient p-8 sm:p-14 text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-14 text-white text-center space-y-6">
+          {/* Real Campus Sunset Amphitheatre Background */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=1600"
+            alt="Campus Evening Sunset"
+            className="absolute inset-0 w-full h-full object-cover object-center -z-10 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-950/95 via-indigo-950/90 to-teal-950/95 -z-10" />
           <div className="max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl sm:text-4xl font-black font-display tracking-tight leading-tight">
               Ready to meet your people on campus?
