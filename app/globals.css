@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 99%;
+    --foreground: 235 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 235 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 25% 12%;
+
+    /* Violet Accent #5b3fe0 */
+    --primary: 251 72% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Teal Secondary #0d9488 */
+    --secondary: 175 84% 32%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 7% 45%;
+
+    --accent: 251 60% 96%;
+    --accent-foreground: 251 72% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 251 72% 56%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 236 28% 7%;
+    --foreground: 240 15% 96%;
+
+    --card: 236 24% 11%;
+    --card-foreground: 240 15% 96%;
+
+    --popover: 236 24% 11%;
+    --popover-foreground: 240 15% 96%;
+
+    /* Violet Accent #7862f8 in dark mode for high readability */
+    --primary: 251 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Teal Secondary #14b8a6 in dark mode */
+    --secondary: 174 77% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 236 20% 16%;
+    --muted-foreground: 236 12% 65%;
+
+    --accent: 251 45% 20%;
+    --accent-foreground: 251 85% 75%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 236 20% 18%;
+    --input: 236 20% 18%;
+    --ring: 251 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom interactive vibe meter & chip utility styles */
+.vibe-gradient {
+  background: linear-gradient(135deg, #5b3fe0 0%, #14b8a6 100%);
+}
+
+.vibe-gradient-subtle {
+  background: linear-gradient(135deg, rgba(91, 63, 224, 0.08) 0%, rgba(20, 184, 166, 0.08) 100%);
+}
+
+.vibe-glow {
+  box-shadow: 0 0 25px -5px rgba(91, 63, 224, 0.25);
+}
+
+.vibe-meter-bar {
+  background: linear-gradient(90deg, #14b8a6 0%, #5b3fe0 100%);
+}
