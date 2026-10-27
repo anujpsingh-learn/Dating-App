@@ -86,8 +86,8 @@ export default function ConnectionsPage() {
             <Users className="w-4 h-4" />
             <span>Campus Network</span>
           </div>
-          <h1 className="text-3xl font-extrabold text-foreground font-display">
-            Connections & Requests
+          <h1 className="text-3xl font-headline font-bold text-foreground">
+            Connections &amp; Requests
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground">
             Contact information is revealed only between mutual connections.

@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CampusProvider } from "@/lib/campus-store";
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/footer";
 
-const bricolage = Bricolage_Grotesque({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Vibe Check | University Student Connection Platform",
+  title: "Vibe Check | University Student Connection Network",
   description:
-    "Find your people on campus. Connect with university students for study partners, hackathons, sports, campus events, and genuine friendships based on shared vibes.",
+    "Curated peer connection for university students. Discover study partners, hackathon teams, gym buddies, campus event companions, and lifelong friends based on shared vibes.",
   keywords: [
     "university networking",
     "campus peer finder",
@@ -27,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Vibe Check Team" }],
   openGraph: {
     title: "Vibe Check | Find Your People on Campus",
-    description: "Not a dating app. The authentic student connection network.",
+    description: "Strictly platonic. The authentic, verified university peer network.",
     type: "website",
     locale: "en_US",
   },
@@ -39,8 +45,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={bricolage.variable}>
-      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground antialiased">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${playfair.variable} ${jakarta.variable}`}
+    >
+      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

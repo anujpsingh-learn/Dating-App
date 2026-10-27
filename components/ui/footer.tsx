@@ -12,12 +12,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Col 1: Brand & Purpose */}
           <div className="md:col-span-2 space-y-3.5">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl vibe-gradient flex items-center justify-center text-white shadow-sm">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
                 <Sparkles className="w-4 h-4" />
               </div>
-              <span className="font-extrabold text-lg tracking-tight font-display">
-                Vibe Check
+              <span className="font-headline font-bold text-xl tracking-tight">
+                Vibe<span className="text-primary">Check</span>
               </span>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-md">

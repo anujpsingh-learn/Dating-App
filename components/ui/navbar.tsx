@@ -61,15 +61,16 @@ export function Navbar() {
     <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/80 backdrop-blur-md transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Brand */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
-          <div className="w-9 h-9 rounded-2xl vibe-gradient flex items-center justify-center text-white shadow-md shadow-primary/25 group-hover:scale-105 transition-transform">
+        <Link href="/" className="flex items-center gap-3 shrink-0 group">
+          <div className="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center shadow-md shadow-primary/25 group-hover:scale-105 transition-transform">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
-            <div className="font-extrabold text-base tracking-tight text-foreground flex items-center gap-1.5 font-display">
-              Vibe Check
-              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full bg-secondary/15 text-secondary">
-                Campus
+            <div className="font-headline font-bold text-lg tracking-tight text-foreground flex items-center gap-2">
+              <span>Vibe<span className="text-primary">Check</span></span>
+              <span className="hidden sm:inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-secondary/15 text-secondary">
+                <ShieldCheck className="w-3 h-3" />
+                <span>Verified .edu</span>
               </span>
             </div>
           </div>
